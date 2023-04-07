@@ -1,0 +1,15 @@
+C:\Users\james.gill\Documents\programering\Fightinggame\Fightinggame\bin\Debug\net6.0\Fightinggame.exe
+C:\Users\james.gill\Documents\programering\Fightinggame\Fightinggame\bin\Debug\net6.0\Fightinggame.deps.json
+C:\Users\james.gill\Documents\programering\Fightinggame\Fightinggame\bin\Debug\net6.0\Fightinggame.runtimeconfig.json
+C:\Users\james.gill\Documents\programering\Fightinggame\Fightinggame\bin\Debug\net6.0\Fightinggame.dll
+C:\Users\james.gill\Documents\programering\Fightinggame\Fightinggame\bin\Debug\net6.0\Fightinggame.pdb
+C:\Users\james.gill\Documents\programering\Fightinggame\Fightinggame\obj\Debug\net6.0\Fightinggame.csproj.AssemblyReference.cache
+C:\Users\james.gill\Documents\programering\Fightinggame\Fightinggame\obj\Debug\net6.0\Fightinggame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\james.gill\Documents\programering\Fightinggame\Fightinggame\obj\Debug\net6.0\Fightinggame.AssemblyInfoInputs.cache
+C:\Users\james.gill\Documents\programering\Fightinggame\Fightinggame\obj\Debug\net6.0\Fightinggame.AssemblyInfo.cs
+C:\Users\james.gill\Documents\programering\Fightinggame\Fightinggame\obj\Debug\net6.0\Fightinggame.csproj.CoreCompileInputs.cache
+C:\Users\james.gill\Documents\programering\Fightinggame\Fightinggame\obj\Debug\net6.0\Fightinggame.dll
+C:\Users\james.gill\Documents\programering\Fightinggame\Fightinggame\obj\Debug\net6.0\refint\Fightinggame.dll
+C:\Users\james.gill\Documents\programering\Fightinggame\Fightinggame\obj\Debug\net6.0\Fightinggame.pdb
+C:\Users\james.gill\Documents\programering\Fightinggame\Fightinggame\obj\Debug\net6.0\Fightinggame.genruntimeconfig.cache
+C:\Users\james.gill\Documents\programering\Fightinggame\Fightinggame\obj\Debug\net6.0\ref\Fightinggame.dll
