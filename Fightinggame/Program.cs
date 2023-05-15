@@ -1,4 +1,6 @@
-﻿
+﻿// En till (egen) loop
+// En egen metod
+// En lista eller array
 
 // olika attacker
 // crittar
@@ -34,19 +36,39 @@ Random generator = new Random();
 
 Console.WriteLine("välkommen till slagsmålsspelet");
 Console.WriteLine("välj vad din slagskämpe ska heta");
-string spelare1 = Console.ReadLine();
+
+Console.WriteLine("namn 1 är James, namn 2 är Åsa, Namn 3 är Alex");
+Console.WriteLine("skriv 0, 1 eller 2 för namnet du vill ha");
+
+List<string> spelare1lista = new List <string> () {"James", "Åsa", "Alex"};
+
+
+string spelare1namn;
+int siffra1;
+
+string input = Console.ReadLine();
+int.TryParse(input, out siffra1);
+spelare1namn = spelare1lista[siffra1];
+
+
 Console.WriteLine("välj vad motståndarens slagskämpe ska heta");
-string spelare2 = Console.ReadLine();
+
+Console.WriteLine("namn 1 är James, namn 2 är Micke, Namn 3 är Namn");
+Console.WriteLine("skriv 0, 1 eller 2 för namnet du vill ha");
+
+List<string> spelare2lista = new List <string> () {"James", "Micke", "Namn"};
+
+string spelare2 = spelare2lista[0];
 
 
-int hpA = 100;
-int hpB = 100;
-if (spelare1 == "james")
+float hpA = 100;
+float hpB = 100;
+if (spelare1namn == spelare1lista[0])
 {
     Console.WriteLine("det är ett fint namn, du har blivit belönad med 100 extra hp");
     hpA = 200;
 }
-if (spelare2 == "james")
+if (spelare2 == spelare2lista[0])
 {
     Console.WriteLine("det är ett fint namn, din motståndare har tyvärr blivit belönad med 100 extra hp, lycka till");
     hpB = 200;
@@ -55,7 +77,7 @@ if (spelare2 == "james")
 while (hpA >= 0 && hpB >= 0)
 {
 
-    Console.WriteLine($"din slagskämpe {spelare1} lever (hp: {hpA})");
+    Console.WriteLine($"din slagskämpe {spelare1namn} lever (hp: {hpA})");
     Console.WriteLine($"din motståndare {spelare2} lever (hp: {hpB})");
 
 
@@ -78,32 +100,17 @@ while (hpA >= 0 && hpB >= 0)
     Console.WriteLine($"du tog {damageB} skada");
     Console.WriteLine($"Du har nu {hpA} hp kvar");
     // A slår B
-    int damageA = generator.Next(26);
+    float damageA = generator.Next(26);
 
     Random crit = new Random();
 
-vapen:
-    Console.WriteLine($"{spelare1} Välj ditt vapen: Händer eller paraply");
+    Console.WriteLine($"{spelare1namn} Välj ditt vapen: Händer eller paraply");
+
+
     string vapen1 = Console.ReadLine();
+    damageA = Vapen(vapen1, damageA);
 
-    if (vapen1 == "händer")
-    {
-
-        damageA = (int)(damageA * 1.00f);
-
-    }
-
-    if (vapen1 == "paraply")
-    {
-
-        damageA = (int)(damageA * 1.35f);
-
-    }
-    else
-    {
-        Console.WriteLine("tror du skrev fel, testa igen");
-        goto vapen;
-    }
+   
 
     int RandomNumbr = generator.Next(1, 101);
     if (RandomNumbr <= 100)
@@ -112,12 +119,13 @@ vapen:
 
         damageA = (int)(damageA * 1.25f);
     }
-
+        
     hpB = hpB - damageA;
     if (hpB < 0)
     {
         hpB = 0;
-        Console.WriteLine($"{spelare1} vann, grattis!");
+        
+        Console.WriteLine($"{spelare1namn} vann, grattis!");
     }
     Console.WriteLine($"{spelare2} tog {damageA} skada");
     Console.WriteLine($"{spelare2} har nu {hpB} hp kvar");
@@ -155,3 +163,25 @@ Console.ReadLine();
 
 
 // Console.ReadLine();
+
+
+static float Vapen(string vapen1, float damageA)
+{
+    while (vapen1 != "händer" && vapen1 !="paraply")
+        {
+            Console.WriteLine("skriv antingen händer eller paraply");
+
+            if (vapen1 == "händer"){
+                damageA = (int)(damageA * 1.0f);
+                
+            }
+            if (vapen1 == "paraply"){
+             damageA = (int)(damageA * 1.3f);
+             
+            }
+
+        }
+
+    return damageA;
+    
+}
